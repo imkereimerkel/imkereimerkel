@@ -31,6 +31,8 @@ const heroHoney = [
   { name: 'Akazienhonig', meta: 'Flüssig · 500 g', price: '8,00 €', image: 'assets/products/akazienhonig-500.png' },
   { name: 'Waldhonig', meta: 'Flüssig · 500 g', price: '10,00 €', image: 'assets/products/waldhonig-500.png' },
   { name: 'Edelkastanienhonig', meta: 'Flüssig · 500 g', price: '10,00 €', image: 'assets/products/edelkastanien_honig_freigestellt.png' },
+  { name: 'Akazienwabe', meta: 'Wabenhonig · 300 g', price: '10,00 €', image: 'assets/products/akazienwabe-300.png' },
+  { name: 'Blütenpollen', meta: 'Lose · 250 g', price: '10,00 €', image: 'assets/products/blutenpollen.png' },
 ];
 const heroCarousel = document.querySelector('.hero-carousel');
 
@@ -47,7 +49,7 @@ if (heroCarousel) {
     const honey = heroHoney[activeHeroHoney];
     heroImage.src = honey.image;
     heroImage.alt = `${honey.name} im Glas`;
-    heroCount.textContent = `${String(activeHeroHoney + 1).padStart(2, '0')} / 08`;
+    heroCount.textContent = `${String(activeHeroHoney + 1).padStart(2, '0')} / ${String(heroHoney.length).padStart(2, '0')}`;
     heroName.textContent = honey.name;
     heroMeta.textContent = honey.meta;
     heroPrice.textContent = honey.price;
